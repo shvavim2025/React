@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { ThemeContext } from "../../App"
 
-const Button = ({text ,func}:{text:string ,func: React.MouseEventHandler<HTMLButtonElement>}) => {
+const Button = ({text}:{text:string}) => {
     const theme = useContext(ThemeContext)
 
     const style = {
@@ -10,7 +10,7 @@ const Button = ({text ,func}:{text:string ,func: React.MouseEventHandler<HTMLBut
     }
     return (
         <>
-            <button style={style} onClick={func}>{text}</button>
+            <button style={style}>{text}</button>
         </>
     )
 }
